@@ -1,10 +1,11 @@
+const addBookButton = document.getElementById('add');
 const libraryArray = [];
 
 function newId() {
   let id = 0;
 
-  const getId = () => counter;
-  const idUp = () => counter++;
+  const getId = () => id;
+  const idUp = () => id++;
   return { getId, idUp };
 }
 
@@ -22,3 +23,8 @@ function addBookToLibrary() {
 
   libraryArray.push(book);
 }
+
+addBookButton.addEventListener('click', () => {
+  addBookToLibrary();
+  libraryId.idUp();
+});
